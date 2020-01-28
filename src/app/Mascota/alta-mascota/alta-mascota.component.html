@@ -1,0 +1,32 @@
+<h2>Alta de mascota</h2>
+<form (submit)="Guardar()" #formularioAlta="ngForm">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="mascota.nombre" #nombre="ngModel"
+        required placeholder="Introduce el nombre">
+    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors.required">
+            El nombre es obligatorio
+        </div>
+    </div>
+
+    <label for="tipo">Tipo</label>
+    <input type="text" id="tipo" name="tipo" autocomplete="off" [(ngModel)]="mascota.tipo"
+        #tipo="ngModel" required placeholder="Introduce el tipo">
+    <div *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)">
+        <div *ngIf="tipo.errors.required">
+            El tipo es obligatorio
+        </div>
+    </div>
+
+    <label for="precio">Precio</label>
+    <input type="text" id="precio" name="precio" autocomplete="off" [(ngModel)]="mascota.precio"
+        #precio="ngModel" required placeholder="Introduce el precio">
+    <div *ngIf="precio.invalid && (precio.dirty || precio.touched)">
+        <div *ngIf="precio.errors.required">
+            La precio es obligatorio
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!formularioAlta.form.valid">Crear</button>
+</form> 

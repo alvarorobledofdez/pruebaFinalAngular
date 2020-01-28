@@ -1,0 +1,30 @@
+<div class="container">
+    <div class=" row">
+        <div class="col-10 offset-1">
+            <h2>Listado de mascotas</h2>
+
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Precio</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mascota of mascotas">
+                        <td>{{ mascota.id }}</td>
+                        <td>{{ mascota.nombre }}</td>
+                        <td>{{ mascota.tipo }}</td>
+                        <td>{{ mascota.precio }}</td>
+                        <td><button (click)="Editar(mascota)">Modificar</button></td>
+                        <td><button (click)="Eliminar(mascota)">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

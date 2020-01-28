@@ -1,0 +1,17 @@
+<h2>Modificar mascota</h2>
+
+<form (submit)="Actualizar(mascota)">
+    <label>Id</label>
+    <input type="text" id="id" name="id" [(ngModel)]="mascota.id" readonly>
+
+    <label>Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="mascota.nombre">
+    
+    <label>Tipo</label>
+    <input type="text" id="tipo" name="tipo" [(ngModel)]="mascota.tipo">
+
+    <label>Precio</label>
+    <input type="text" id="precio" name="precio" [(ngModel)]="mascota.precio">
+
+    <button type="submit">Modificar</button>
+</form>

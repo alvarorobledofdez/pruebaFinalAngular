@@ -1,0 +1,26 @@
+<h2>Modificar cliente</h2>
+
+<form (submit)="Actualizar(cliente)">
+    <label>Id</label>
+    <input type="text" id="id" name="id" [(ngModel)]="cliente.id" readonly>
+
+    <label>Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="cliente.nombre">
+    
+    <label>Apellidos</label>
+    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="cliente.apellidos">
+    
+    <label>Direccion</label>
+    <input type="text" id="direccion" name="direccion" [(ngModel)]="cliente.direccion">
+    
+    <label>Localidad</label>
+    <input type="text" id="localidad" name="localidad" [(ngModel)]="cliente.localidad">
+    
+    <label>Correo</label>
+    <input type="text" id="correo" name="correo" [(ngModel)]="cliente.correo">
+
+    <label>Telefono</label>
+    <input type="text" id="telefono" name="telefono" [(ngModel)]="cliente.telefono">
+
+    <button type="submit">Modificar</button>
+</form>

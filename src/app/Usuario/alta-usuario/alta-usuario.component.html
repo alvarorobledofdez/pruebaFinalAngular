@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-4 offset-4">
+        <h2>Alta de usuario</h2>
+
+        <form (submit)="Guardar()" #formularioAlta="ngForm" class="form">
+            <div class="row col-12">
+                <label class="col-12" for="nombre">Nombre</label><br>
+
+                <input class="input-group" type="text" id="nombre" name="nombre" autocomplete="off"
+                    [(ngModel)]="usuario.nombre" #nombre="ngModel" required placeholder="Introduce el nombre"><br><br>
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre.errors.required">
+                        El nombre es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <label for="apellidos" class="col-sm-2 col-form-label">Apellidos</label><br>
+            <div class="row col-12">
+                <input type="text" id="apellidos" name="apellidos" autocomplete="off" [(ngModel)]="usuario.apellidos"
+                    #apellidos="ngModel" required placeholder="Introduce el apellido"><br><br>
+                <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="alert alert-danger">
+                    <div *ngIf="apellidos.errors.required">
+                        Los apellidos son obligatorios
+                    </div>
+                </div>
+            </div>
+
+            <label for="telefono" class="col-sm-2 col-form-label">Telefono</label><br>
+            <div class="row col-12">
+                <input type="text" id="telefono" name="telefono" autocomplete="off" [(ngModel)]="usuario.telefono"
+                    #telefono="ngModel" required placeholder="Introduce el telefono"><br><br>
+                <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
+                    <div *ngIf="telefono.errors.required">
+                        El telefono es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <label for="username" class="col-sm-2 col-form-label">Username</label><br>
+            <div class="row col-12">
+                <input type="text" id="username" name="username" autocomplete="off" [(ngModel)]="usuario.username"
+                    #username="ngModel" required placeholder="Introduce el username">
+                <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                    <div *ngIf="username.errors.required">
+                        El username es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+            <label for="contrasena" class="col-sm-2 col-form-label">Contrasena</label><br>
+            <div class="row col-12">
+                <input type="password" id="contrasena" name="contrasena" autocomplete="off"
+                    [(ngModel)]="usuario.contrasena" #contrasena="ngModel" required
+                    placeholder="Introduce la contrasena"><br><br>
+                <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="alert alert-danger">
+                    <div *ngIf="contrasena.errors.required">
+                        La contrasena es obligatoria
+                    </div>
+                </div>
+            </div><br>
+
+                <button type="submit" [disabled]="!formularioAlta.form.valid" class="btn btn-primary">Crear</button>
+            
+        </form>
+    </div>
+</div>
