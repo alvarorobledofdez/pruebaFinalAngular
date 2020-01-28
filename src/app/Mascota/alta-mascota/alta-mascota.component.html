@@ -1,32 +1,41 @@
-<h2>Alta de mascota</h2>
-<form (submit)="Guardar()" #formularioAlta="ngForm">
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Alta de mascota</h2>
+        <form (submit)="Guardar()" #formularioAlta="ngForm" class="form">
 
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="mascota.nombre" #nombre="ngModel"
-        required placeholder="Introduce el nombre">
-    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-        <div *ngIf="nombre.errors.required">
-            El nombre es obligatorio
-        </div>
+            <label class="col-12" for="nombre">Nombre</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="nombre" name="nombre" autocomplete="off"
+                    [(ngModel)]="mascota.nombre" #nombre="ngModel" required placeholder="Introduce el nombre"><br><br>
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre.errors.required">
+                        El nombre es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="tipo">Tipo</label>
+                <input class="input-group" type="text" id="tipo" name="tipo" autocomplete="off"
+                    [(ngModel)]="mascota.tipo" #tipo="ngModel" required placeholder="Introduce el tipo"><br><br>
+                <div *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)" class="alert alert-danger">
+                    <div *ngIf="tipo.errors.required">
+                        El tipo es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="precio">Precio</label>
+                <input class="input-group" type="text" id="precio" name="precio" autocomplete="off"
+                    [(ngModel)]="mascota.precio" #precio="ngModel" required placeholder="Introduce el precio"><br><br>
+                <div *ngIf="precio.invalid && (precio.dirty || precio.touched)" class="alert alert-danger">
+                    <div *ngIf="precio.errors.required">
+                        El precio es obligatorio
+                    </div>
+                </div>
+            </div><br>
+            <button type="submit" [disabled]="!formularioAlta.form.valid" class="btn btn-primary">Crear</button>
+        </form>
     </div>
-
-    <label for="tipo">Tipo</label>
-    <input type="text" id="tipo" name="tipo" autocomplete="off" [(ngModel)]="mascota.tipo"
-        #tipo="ngModel" required placeholder="Introduce el tipo">
-    <div *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)">
-        <div *ngIf="tipo.errors.required">
-            El tipo es obligatorio
-        </div>
-    </div>
-
-    <label for="precio">Precio</label>
-    <input type="text" id="precio" name="precio" autocomplete="off" [(ngModel)]="mascota.precio"
-        #precio="ngModel" required placeholder="Introduce el precio">
-    <div *ngIf="precio.invalid && (precio.dirty || precio.touched)">
-        <div *ngIf="precio.errors.required">
-            La precio es obligatorio
-        </div>
-    </div>
-
-    <button type="submit" [disabled]="!formularioAlta.form.valid">Crear</button>
-</form> 
+</div>

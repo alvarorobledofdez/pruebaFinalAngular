@@ -24,7 +24,7 @@ export class ListadoUsuarioComponent implements OnInit {
 
   Eliminar(usuario: Usuario) {
     this.http.deleteUsuario(usuario).subscribe(datos => {
-    this.usuarios = this.usuarios.filter(u => u != usuario)
+    this.usuarios = this.usuarios.filter(u => u!=usuario)
       alert("usuario eliminado");
       this.router.navigate(["listadoUsuarios"]);
     });

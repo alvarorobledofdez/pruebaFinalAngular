@@ -15,7 +15,7 @@ export class ListadoMascotaComponent implements OnInit {
 
   ngOnInit() {
     this.http.getMascotas().subscribe(datos => { this.mascotas = datos });
-  }
+  } 
 
   Editar(mascota: Mascota): void {
     localStorage.setItem("id", mascota.id.toString());

@@ -1,15 +1,21 @@
-<div clas="container">
+<div class="container fondo">
 
-  <h1>Home</h1>
-  <button (click)="abrirAltaUsuarios()">Alta usuarios</button>
-  <button (click)="abrirListadoUsuarios()">Listado usuarios</button>
-  <button (click)="abrirAltaMascotas()">Alta mascota</button>
-  <button (click)="abrirListadoMascotas()">Listado mascotas</button>
-  <button (click)="abrirAltaClientes()">Alta cliente</button>
-  <button (click)="abrirListadoClientes()">Listado clientes</button>
-
-
-
+  <h1>Pet shop <img src="../assets/img/dogGrande.png" width="10%" height="10%"></h1>
+  <div class="transicion">
+    <div class="row">
+      <div class="col-sm-4 offset-4">
+        <button class="btnMain" (click)="abrirAltaUsuarios()">Alta usuarios</button>
+        <button class="btnMain" (click)="abrirListadoUsuarios()">Listado usuarios</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 offset-4">
+        <button class="btnMain" (click)="abrirAltaMascotas()">Alta mascota</button>
+        <button class="btnMain" (click)="abrirListadoMascotas()">Listado mascotas</button>
+      </div>
+    </div>
+  </div>
 
   <router-outlet></router-outlet>
 </div>

@@ -9,6 +9,7 @@ import { AltaClienteComponent } from './Cliente/alta-cliente/alta-cliente.compon
 import { ModificarUsuarioComponent } from './Usuario/modificar-usuario/modificar-usuario.component';
 import { ModificarMascotaComponent } from './Mascota/modificar-mascota/modificar-mascota.component';
 import { ModificarClienteComponent } from './Cliente/modificar-cliente/modificar-cliente.component';
+import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.component';
 
 
 const routes: Routes = [{
@@ -38,6 +39,9 @@ const routes: Routes = [{
 }, {
   path: 'modificarClientes',
   component:  ModificarClienteComponent
+},{
+  path: 'venderMascota',
+  component: VenderMascotaComponent
 }];
 
 @NgModule({

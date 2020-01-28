@@ -3,7 +3,7 @@
         <div class="col-10 offset-1">
             <h2>Listado de mascotas</h2>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
                         <th>Id</th>
@@ -11,7 +11,7 @@
                         <th>Tipo</th>
                         <th>Precio</th>
                         <th>Modificar</th>
-                        <th>Eliminar</th>
+                        <th>Vender</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,8 +20,8 @@
                         <td>{{ mascota.nombre }}</td>
                         <td>{{ mascota.tipo }}</td>
                         <td>{{ mascota.precio }}</td>
-                        <td><button (click)="Editar(mascota)">Modificar</button></td>
-                        <td><button (click)="Eliminar(mascota)">Eliminar</button></td>
+                        <td><button (click)="Editar(mascota)" class="btn btn-outline-light">Modificar</button></td>
+                        <td><button (click)="Vender(mascota)" class="btn btn-outline-light">Vender</button></td>
                     </tr>
                 </tbody>
             </table>

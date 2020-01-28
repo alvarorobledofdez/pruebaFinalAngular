@@ -1,23 +1,39 @@
-<h2>Modificar usuario</h2>
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Modificar usuario</h2>
 
-<form (submit)="Actualizar(usuario)">
-    <label>Id</label>
-    <input type="text" id="id" name="id" [(ngModel)]="usuario.id" readonly>
+        <form (submit)="Actualizar(usuario)" class="form">
+            <label class="col-12">Id</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="id" name="id" [(ngModel)]="usuario.id" readonly><br><br>
+            </div><br>
 
-    <label>Nombre</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre">
-    
-    <label>Apellidos</label>
-    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="usuario.apellidos">
+            <label class="col-12">Nombre</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre"><br><br>
+            </div><br>
 
-    <label>Telefono</label>
-    <input type="text" id="telefono" name="telefono" [(ngModel)]="usuario.telefono">
+            <label class="col-12">Apellidos</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="apellidos" name="apellidos" [(ngModel)]="usuario.apellidos"><br><br>
+            </div><br>
 
-    <label>username</label>
-    <input type="text" id="username" name="username" [(ngModel)]="usuario.username">
-    
-    <label>Contrasena</label>
-    <input type="text" id="contrasena" name="contrasena" [(ngModel)]="usuario.contrasena">
+            <label class="col-12">Telefono</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="telefono" name="telefono" [(ngModel)]="usuario.telefono"><br><br>
+            </div><br>
 
-    <button type="submit">Modificar</button>
-</form>
+            <label class="col-12">Username</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="username" name="username" [(ngModel)]="usuario.username"><br><br>
+            </div><br>
+
+            <label class="col-12">Contrasena</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="contrasena" name="contrasena" [(ngModel)]="usuario.contrasena"><br><br>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Modificar</button>
+        </form>
+    </div>
+</div>

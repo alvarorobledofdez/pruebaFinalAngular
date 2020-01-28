@@ -1,70 +1,91 @@
-<h2>Alta de cliente</h2>
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Alta de cliente</h2>
 
-<form (submit)="Guardar()" #formularioAlta="ngForm">
+        <form (submit)="Guardar()" #formularioAlta="ngForm" class="form">
+            <label class="col-12" for="dni">Dni</label><br>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="dni" name="dni" autocomplete="off" [(ngModel)]="cliente.dni"
+                    #dni="ngModel" required placeholder="Introduce el dni"><br><br>
+                <div *ngIf="dni.invalid && (dni.dirty || dni.touched)" class="alert alert-danger">
+                    <div *ngIf="dni.errors.required">
+                        El dni es obligatorio
+                    </div>
+                </div>
+            </div><br>
 
-    <label for="dni">Dni</label>
-    <input type="text" id="dni" name="dni" autocomplete="off" [(ngModel)]="cliente.dni" #dni="ngModel" required
-        placeholder="Introduce el dni">
-    <div *ngIf="dni.invalid && (dni.dirty || dni.touched)">
-        <div *ngIf="dni.errors.required">
-            El dni es obligatorio
-        </div>
+            <div class="row col-12">
+                <label class="col-12" for="nombre">Nombre</label><br>
+                <input class="input-group" type="text" id="nombre" name="nombre" autocomplete="off"
+                    [(ngModel)]="cliente.nombre" #nombre="ngModel" required placeholder="Introduce el nombre"><br><br>
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre.errors.required">
+                        El nombre es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="apellidos">Apellidos</label><br>
+                <input class="input-group" type="text" id="apellidos" name="apellidos" autocomplete="off"
+                    [(ngModel)]="cliente.apellidos" #apellidos="ngModel" required
+                    placeholder="Introduce el apellido"><br><br>
+                <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="alert alert-danger">
+                    <div *ngIf="apellidos.errors.required">
+                        Los apellidos son obligatorios
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="direccion">Direccion</label>
+                <input class="input-group" type="text" id="direccion" name="direccion" autocomplete="off"
+                    [(ngModel)]="cliente.direccion" #direccion="ngModel" required
+                    placeholder="Introduce la direccion"><br><br>
+                <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="alert alert-danger">
+                    <div *ngIf="direccion.errors.required">
+                        La direccion es obligatoria
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="localidad">Localidad</label><br>
+                <input class="input-group" type="text" id="localidad" name="localidad" autocomplete="off"
+                    [(ngModel)]="cliente.localidad" #localidad="ngModel" required
+                    placeholder="Introduce la localidad"><br><br>
+                <div *ngIf="localidad.invalid && (localidad.dirty || localidad.touched)" class="alert alert-danger">
+                    <div *ngIf="localidad.errors.required">
+                        La localidad es obligatoria
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="correo">Correo</label><br>
+                <input class="input-group" type="text" id="correo" name="correo" autocomplete="off"
+                    [(ngModel)]="cliente.correo" #correo="ngModel" required placeholder="Introduce el correo"><br><br>
+                <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger">
+                    <div *ngIf="correo.errors.required">
+                        El correo es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row col-12">
+                <label class="col-12" for="telefono">Telefono</label><br>
+                <input class="input-group" type="text" id="telefono" name="telefono" autocomplete="off"
+                    [(ngModel)]="cliente.telefono" #telefono="ngModel" required
+                    placeholder="Introduce el telefono"><br><br>
+                <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+                    <div *ngIf="telefono.errors.required">
+                        El telefono es obligatorio
+                    </div>
+                </div>
+            </div><br>
+
+
+            <button type="submit" [disabled]="!formularioAlta.form.valid" class="btn btn-primary">Crear</button>
+        </form>
     </div>
-
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="cliente.nombre" #nombre="ngModel"
-        required placeholder="Introduce el nombre">
-    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-        <div *ngIf="nombre.errors.required">
-            El nombre es obligatorio
-        </div>
-    </div>
-
-    <label for="apellidos">Apellidos</label>
-    <input type="text" id="apellidos" name="apellidos" autocomplete="off" [(ngModel)]="cliente.apellidos"
-        #apellidos="ngModel" required placeholder="Introduce el apellido">
-    <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)">
-        <div *ngIf="apellidos.errors.required">
-            Los apellidos son obligatorios
-        </div>
-    </div>
-
-    <label for="direccion">Direccion</label>
-    <input type="text" id="direccion" name="direccion" autocomplete="off" [(ngModel)]="cliente.direccion"
-        #direccion="ngModel" required placeholder="Introduce la direccion">
-    <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)">
-        <div *ngIf="direccion.errors.required">
-            La direccion es obligatoria
-        </div>
-    </div>
-
-    <label for="localidad">Localidad</label>
-    <input type="text" id="localidad" name="localidad" autocomplete="off" [(ngModel)]="cliente.localidad"
-        #localidad="ngModel" required placeholder="Introduce la localidad">
-    <div *ngIf="localidad.invalid && (localidad.dirty || localidad.touched)">
-        <div *ngIf="localidad.errors.required">
-            El localidad es obligatoria
-        </div>
-    </div>
-
-    <label for="correo">Correo</label>
-    <input type="text" id="correo" name="correo" autocomplete="off" [(ngModel)]="cliente.correo" #correo="ngModel"
-        required placeholder="Introduce el correo">
-    <div *ngIf="correo.invalid && (correo.dirty || correo.touched)">
-        <div *ngIf="correo.errors.required">
-            El correo es obligatorio
-        </div>
-    </div>
-
-    <label for="telefono">Telefono</label>
-    <input type="text" id="telefono" name="telefono" autocomplete="off" [(ngModel)]="cliente.telefono"
-        #telefono="ngModel" required placeholder="Introduce el telefono">
-    <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
-        <div *ngIf="telefono.errors.required">
-            El telefono es obligatorio
-        </div>
-    </div>
-
-
-    <button type="submit" [disabled]="!formularioAlta.form.valid">Crear</button>
-</form>
+</div>

@@ -1,17 +1,29 @@
-<h2>Modificar mascota</h2>
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Modificar mascota</h2>
 
-<form (submit)="Actualizar(mascota)">
-    <label>Id</label>
-    <input type="text" id="id" name="id" [(ngModel)]="mascota.id" readonly>
+        <form (submit)="Actualizar(mascota)" class="form">
+            <label class="col-12">Id</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="id" name="id" [(ngModel)]="mascota.id" readonly><br><br>
+            </div><br>
 
-    <label>Nombre</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="mascota.nombre">
-    
-    <label>Tipo</label>
-    <input type="text" id="tipo" name="tipo" [(ngModel)]="mascota.tipo">
+            <label class="col-12">Nombre</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="nombre" name="nombre" [(ngModel)]="mascota.nombre"><br><br>
+            </div><br>
 
-    <label>Precio</label>
-    <input type="text" id="precio" name="precio" [(ngModel)]="mascota.precio">
+            <label class="col-12">Tipo</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="tipo" name="tipo" [(ngModel)]="mascota.tipo"><br><br>
+            </div><br>
 
-    <button type="submit">Modificar</button>
-</form>
+            <label class="col-12">Precio</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="precio" name="precio" [(ngModel)]="mascota.precio"><br><br>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Modificar</button>
+        </form>
+    </div>
+</div>

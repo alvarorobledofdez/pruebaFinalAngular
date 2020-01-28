@@ -3,7 +3,7 @@
         <div class="col-10 offset-1">
             <h2>Listado de usuarios</h2>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
                         <th>Id</th>
@@ -22,8 +22,8 @@
                         <td>{{ usuario.apellidos }}</td>
                         <td>{{ usuario.telefono }}</td>
                         <td>{{ usuario.username }}</td>
-                        <td><button (click)="Editar(usuario)">Modificar</button></td>
-                        <td><button (click)="Eliminar(usaurio)">Eliminar</button></td>
+                        <td><button (click)="Editar(usuario)" class="btn btn-outline-light">Modificar</button></td>
+                        <td><button (click)="Eliminar(usuario)" class="btn btn-outline-light">Eliminar</button></td>
                     </tr>
                 </tbody>
             </table>

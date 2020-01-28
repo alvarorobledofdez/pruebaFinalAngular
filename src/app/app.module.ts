@@ -14,6 +14,7 @@ import { AltaMascotaComponent } from './Mascota/alta-mascota/alta-mascota.compon
 import { ListadoClienteComponent } from './Cliente/listado-cliente/listado-cliente.component';
 import { ListadoUsuarioComponent } from './Usuario/listado-usuario/listado-usuario.component';
 import { ListadoMascotaComponent } from './Mascota/listado-mascota/listado-mascota.component';
+import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ListadoMascotaComponent } from './Mascota/listado-mascota/listado-masco
     AltaMascotaComponent,
     ListadoClienteComponent,
     ListadoUsuarioComponent,
-    ListadoMascotaComponent
+    ListadoMascotaComponent,
+    VenderMascotaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,26 +1,45 @@
-<h2>Modificar cliente</h2>
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Modificar cliente</h2>
 
-<form (submit)="Actualizar(cliente)">
-    <label>Id</label>
-    <input type="text" id="id" name="id" [(ngModel)]="cliente.id" readonly>
+        <form (submit)="Actualizar(cliente)" class="form">
 
-    <label>Nombre</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="cliente.nombre">
-    
-    <label>Apellidos</label>
-    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="cliente.apellidos">
-    
-    <label>Direccion</label>
-    <input type="text" id="direccion" name="direccion" [(ngModel)]="cliente.direccion">
-    
-    <label>Localidad</label>
-    <input type="text" id="localidad" name="localidad" [(ngModel)]="cliente.localidad">
-    
-    <label>Correo</label>
-    <input type="text" id="correo" name="correo" [(ngModel)]="cliente.correo">
+            <label class="col-12">Id</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="id" name="id" [(ngModel)]="cliente.id" readonly><br><br>
+            </div><br>
 
-    <label>Telefono</label>
-    <input type="text" id="telefono" name="telefono" [(ngModel)]="cliente.telefono">
+            <label class="col-12">Nombre</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="nombre" name="nombre" [(ngModel)]="cliente.nombre"><br><br>
+            </div><br>
 
-    <button type="submit">Modificar</button>
-</form>
+            <label class="col-12">Apellidos</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="apellidos" name="apellidos" [(ngModel)]="cliente.apellidos"><br><br>
+            </div><br>
+
+            <label class="col-12">Direccion</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="direccion" name="direccion" [(ngModel)]="cliente.direccion"><br><br>
+            </div><br>
+
+            <label class="col-12">Localidad</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="localidad" name="localidad" [(ngModel)]="cliente.localidad"><br><br>
+            </div><br>
+
+            <label class="col-12">Correo</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="correo" name="correo" [(ngModel)]="cliente.correo"><br><br>
+            </div><br>
+
+            <label class="col-12">Telefono</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="telefono" name="telefono" [(ngModel)]="cliente.telefono"><br><br>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Modificar</button>
+        </form>
+    </div>
+</div>

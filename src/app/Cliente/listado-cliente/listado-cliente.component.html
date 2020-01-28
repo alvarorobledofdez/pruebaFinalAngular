@@ -3,7 +3,7 @@
         <div class="col-10 offset-1">
             <h2>Listado de clientes</h2>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
                         <th>Id</th>
@@ -28,8 +28,8 @@
                         <td>{{ cliente.localidad }}</td>
                         <td>{{ cliente.correo }}</td>
                         <td>{{ cliente.telefono }}</td>
-                        <td><button (click)="Editar(cliente)">Modificar</button></td>
-                        <td><button (click)="Eliminar(cliente)">Eliminar</button></td>
+                        <td><button (click)="Editar(cliente)" class="btn btn-outline-light">Modificar</button></td>
+                        <td><button (click)="Eliminar(cliente)" class="btn btn-outline-light">Eliminar</button></td>
                     </tr>
                 </tbody>
             </table>

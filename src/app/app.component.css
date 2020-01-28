@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+
+.btnMain:focus{
+    background-color: rgb(199, 230, 191);
+}
+
+.btnMain:hover{
+    background-color: rgb(199, 230, 191);
+}
+
+.btnMain{ 
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    border-color: rgb(228, 228, 228);
+    border-width: 2px;
+    padding: 10px 25px;
+    margin: 5px;
+}
+
+.fondo{
+    
+    background-color: rgba(255, 255, 255, 0.3);
+}
