@@ -21,4 +21,8 @@ export class VenderMascotaComponent implements OnInit {
   buscarTipo() {
     this.http.getMascotasTipo(this.tipo).subscribe(datos => {this.mascotas = datos;})
   }
+
+  vender(){
+    this.router.navigate(["buscarCliente"]);
+  }
 }

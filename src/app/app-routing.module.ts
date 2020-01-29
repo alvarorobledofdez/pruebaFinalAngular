@@ -10,6 +10,7 @@ import { ModificarUsuarioComponent } from './Usuario/modificar-usuario/modificar
 import { ModificarMascotaComponent } from './Mascota/modificar-mascota/modificar-mascota.component';
 import { ModificarClienteComponent } from './Cliente/modificar-cliente/modificar-cliente.component';
 import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.component';
+import { BuscarClienteComponent } from './Cliente/buscar-cliente/buscar-cliente.component';
 
 
 const routes: Routes = [{
@@ -42,6 +43,9 @@ const routes: Routes = [{
 },{
   path: 'venderMascotas',
   component: VenderMascotaComponent
+},{
+  path: 'buscarCliente',
+  component: BuscarClienteComponent
 }];
 
 @NgModule({

@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Buscar cliente</h2>
+
+        <form (submit)="buscarDni()" class="form">
+            <label class="col-12">dni</label>
+            <div class="row col-12">
+                <input class="input-group" type="text" id="dni" name="dni" [(ngModel)]="dni"><br><br>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+    </div>
+</div>

@@ -52,4 +52,8 @@ export class AppComponent {
   abrirVenderMascotas(){
     this.router.navigate(['venderMascotas']);
   }
+
+  abrirBuscarCliente(){
+    this.router.navigate(['buscarCliente']);
+  }
 }

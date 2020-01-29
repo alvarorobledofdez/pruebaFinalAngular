@@ -22,6 +22,9 @@ export class ClienteService {
 	getClienteUnico(id: number) {
 		return this.http.get<Cliente>(this.path + "/" + id);
 	}
+	getClienteDni(dni: string){
+		return this.http.get<Cliente>(this.path + "/dni/" + dni);
+	}
 	updateCliente(cliente: Cliente) {
 		return this.http.put<Cliente>(this.path + "/" + cliente.id, cliente);
 	}
