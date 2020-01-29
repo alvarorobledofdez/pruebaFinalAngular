@@ -40,7 +40,7 @@ const routes: Routes = [{
   path: 'modificarClientes',
   component:  ModificarClienteComponent
 },{
-  path: 'venderMascota',
+  path: 'venderMascotas',
   component: VenderMascotaComponent
 }];
 

@@ -11,6 +11,7 @@
                         <th>Apellidos</th>
                         <th>Telefono</th>
                         <th>Username</th>
+                        <th>Rol</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
                     </tr>
@@ -22,6 +23,7 @@
                         <td>{{ usuario.apellidos }}</td>
                         <td>{{ usuario.telefono }}</td>
                         <td>{{ usuario.username }}</td>
+                        <td>{{ usuario.rol }}</td>
                         <td><button (click)="Editar(usuario)" class="btn btn-outline-light">Modificar</button></td>
                         <td><button (click)="Eliminar(usuario)" class="btn btn-outline-light">Eliminar</button></td>
                     </tr>

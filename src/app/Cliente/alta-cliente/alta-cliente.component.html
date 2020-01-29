@@ -17,10 +17,14 @@
             <div class="row col-12">
                 <label class="col-12" for="nombre">Nombre</label><br>
                 <input class="input-group" type="text" id="nombre" name="nombre" autocomplete="off"
-                    [(ngModel)]="cliente.nombre" #nombre="ngModel" required placeholder="Introduce el nombre"><br><br>
+                    [(ngModel)]="cliente.nombre" #nombre="ngModel" required placeholder="Introduce el nombre"
+                    pattern="^[a-zA-Z]*$"><br><br>
                 <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
                     <div *ngIf="nombre.errors.required">
                         El nombre es obligatorio
+                    </div>
+                    <div [hidden]="!nombre.errors?.pattern">
+                        El nombre solo admite letras
                     </div>
                 </div>
             </div><br>
@@ -28,11 +32,14 @@
             <div class="row col-12">
                 <label class="col-12" for="apellidos">Apellidos</label><br>
                 <input class="input-group" type="text" id="apellidos" name="apellidos" autocomplete="off"
-                    [(ngModel)]="cliente.apellidos" #apellidos="ngModel" required
-                    placeholder="Introduce el apellido"><br><br>
+                    [(ngModel)]="cliente.apellidos" #apellidos="ngModel" required placeholder="Introduce el apellido"
+                    pattern="^[a-zA-Z]*$"><br><br>
                 <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="alert alert-danger">
                     <div *ngIf="apellidos.errors.required">
                         Los apellidos son obligatorios
+                    </div>
+                    <div [hidden]="!apellidos.errors?.pattern">
+                        Los apellidos solo admiten letras
                     </div>
                 </div>
             </div><br>
@@ -63,24 +70,32 @@
 
             <div class="row col-12">
                 <label class="col-12" for="correo">Correo</label><br>
-                <input class="input-group" type="text" id="correo" name="correo" autocomplete="off"
-                    [(ngModel)]="cliente.correo" #correo="ngModel" required placeholder="Introduce el correo"><br><br>
+                <input class="input-group" type="email" id="correo" name="correo" autocomplete="off"
+                    [(ngModel)]="cliente.correo" ngModel #correo="ngModel" required placeholder="Introduce el correo"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br><br>
                 <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger">
                     <div *ngIf="correo.errors.required">
                         El correo es obligatorio
                     </div>
+                    <div [hidden]="!correo.errors?.pattern">
+                        El formato no es correcto
+                    </div>
+
                 </div>
             </div><br>
 
             <div class="row col-12">
                 <label class="col-12" for="telefono">Telefono</label><br>
                 <input class="input-group" type="text" id="telefono" name="telefono" autocomplete="off"
-                    [(ngModel)]="cliente.telefono" #telefono="ngModel" required
-                    placeholder="Introduce el telefono"><br><br>
+                    [(ngModel)]="cliente.telefono" #telefono="ngModel" required placeholder="Introduce el telefono"
+                    maxlength="9" pattern="^[0-9]*$"><br><br>
                 <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
                     <div *ngIf="telefono.errors.required">
                         El telefono es obligatorio
                     </div>
+                    <div [hidden]="!telefono.errors?.pattern">
+                        El telefono solo admite numeros
+                    </div> 
                 </div>
             </div><br>
 

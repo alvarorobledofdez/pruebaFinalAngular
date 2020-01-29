@@ -27,4 +27,8 @@ export class MascotaService {
   deleteMascota(mascota: Mascota) {
     return this.http.delete<Mascota>(this.path + "/" + mascota.id);
   } 
+
+  getMascotasTipo(tipo: string){
+    return this.http.get<Mascota[]>(this.path + "/tipo/" + tipo);
+  }
 }

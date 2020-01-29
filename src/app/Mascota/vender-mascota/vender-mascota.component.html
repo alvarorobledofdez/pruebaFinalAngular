@@ -2,13 +2,41 @@
     <div class="col-5 offset-4">
         <h2>Vender mascota</h2>
 
-        <form (submit)="Actualizar(mascota)" class="form">
-            <label class="col-12">Dni</label>
+        <form (submit)="buscarTipo()" class="form">
+            <label class="col-12">Tipo</label>
             <div class="row col-12">
-                <input class="input-group" type="text" id="dni" name="dni" [(ngModel)]="cliente.id"><br><br>
+                <input class="input-group" type="text" id="tipo" name="tipo" [(ngModel)]="tipo"><br><br>
             </div><br>
 
-            <button type="submit" class="btn btn-primary">Vender</button>
+            <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
+    </div>
+</div>
+<div>
+    <div class=" row">
+        <div class="col-10 offset-1">
+            <h2>Listado de mascotas</h2>
+
+            <table class="table table-striped table-dark">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Precio</th>
+                        <th>Vender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mascota of mascotas">
+                        <td>{{ mascota.id }}</td>
+                        <td>{{ mascota.nombre }}</td>
+                        <td>{{ mascota.tipo }}</td>
+                        <td>{{ mascota.precio }}</td>
+                        <td><button class="btn btn-outline-light">Vender</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

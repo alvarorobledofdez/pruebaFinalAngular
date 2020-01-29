@@ -49,7 +49,7 @@ export class AppComponent {
     this.router.navigate(['modificarClientes']);
   }
 
-  abrirVenderMascota(){
-    this.router.navigate(['venderMascota']);
+  abrirVenderMascotas(){
+    this.router.navigate(['venderMascotas']);
   }
 }

@@ -15,6 +15,8 @@ import { ListadoClienteComponent } from './Cliente/listado-cliente/listado-clien
 import { ListadoUsuarioComponent } from './Usuario/listado-usuario/listado-usuario.component';
 import { ListadoMascotaComponent } from './Mascota/listado-mascota/listado-mascota.component';
 import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.component';
+import { ValidacionCaracteresDirective } from './Validaciones/validacion-caracteres.directive';
+import { ValidacionTelefonoDirective } from './Validaciones/validacion-telefono.directive';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.
     ListadoClienteComponent,
     ListadoUsuarioComponent,
     ListadoMascotaComponent,
-    VenderMascotaComponent
+    VenderMascotaComponent,
+    ValidacionCaracteresDirective,
+    ValidacionTelefonoDirective
   ],
   imports: [
     BrowserModule,
