@@ -56,4 +56,8 @@ export class AppComponent {
   abrirBuscarCliente(){
     this.router.navigate(['buscarCliente']);
   }
+
+  abrirLoginUsuarios(){
+    this.router.navigate(['loginUsuario']);
+  }
 }

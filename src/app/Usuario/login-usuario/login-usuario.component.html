@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-5 offset-4">
+        <h2>Iniciar sesion</h2>
+
+        <form (submit)="login()" class="form">
+
+
+            <label for="username" class="col-12">Username</label><br>
+            <div class="row col-12">
+                <input type="text" class="input-group" id="username" name="username" autocomplete="off"
+                    [(ngModel)]="usuario.username" #username="ngModel" required
+                    placeholder="Introduce el username"><br><br>
+            </div><br>
+
+            <label for="contrasena" class="col-12">Contrasena</label><br>
+            <div class="row col-12">
+                <input type="password" class="input-group" id="contrasena" name="contrasena" autocomplete="off"
+                    [(ngModel)]="usuario.contrasena" #contrasena="ngModel" required
+                    placeholder="Introduce la contrasena"><br><br>
+            </div><br>
+
+
+            <button type="submit" class="btn btn-primary">Login</button>
+
+        </form>
+    </div>
+</div>

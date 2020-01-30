@@ -11,6 +11,7 @@ import { ModificarMascotaComponent } from './Mascota/modificar-mascota/modificar
 import { ModificarClienteComponent } from './Cliente/modificar-cliente/modificar-cliente.component';
 import { VenderMascotaComponent } from './Mascota/vender-mascota/vender-mascota.component';
 import { BuscarClienteComponent } from './Cliente/buscar-cliente/buscar-cliente.component';
+import { LoginUsuarioComponent } from './Usuario/login-usuario/login-usuario.component';
 
 
 const routes: Routes = [{
@@ -46,6 +47,9 @@ const routes: Routes = [{
 },{
   path: 'buscarCliente',
   component: BuscarClienteComponent
+},{
+  path: 'loginUsuario',
+  component: LoginUsuarioComponent
 }];
 
 @NgModule({

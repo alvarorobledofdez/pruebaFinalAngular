@@ -21,6 +21,9 @@ export class UsuarioService {
   getUsuarioUnico(id: number) {
     return this.http.get<Usuario>(this.path + "/" + id);
   }
+  getUsuarioUsername(username: string) {
+    return this.http.get<Usuario>(this.path + "/username/" + username);
+  }
   updateUsuario(usuario: Usuario) {
     return this.http.put<Usuario>(this.path + "/" + usuario.id, usuario);
   }

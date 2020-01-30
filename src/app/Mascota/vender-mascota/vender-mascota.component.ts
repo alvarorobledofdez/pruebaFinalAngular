@@ -22,7 +22,8 @@ export class VenderMascotaComponent implements OnInit {
     this.http.getMascotasTipo(this.tipo).subscribe(datos => {this.mascotas = datos;})
   }
 
-  vender(){
+  vender(mascota: Mascota){
+    localStorage.setItem("idMascota", mascota.id.toString());
     this.router.navigate(["buscarCliente"]);
   }
 }
